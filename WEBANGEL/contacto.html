@@ -9,27 +9,6 @@
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="logoangel.png" alt="Alchemists of Sounds">
-            </a>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes.html">Quiénes somos</a></li>
-                <li><a href="multimedia.html">Multimedia</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="reserva.html">Reserva</a></li>
-                <li><a href="tv.html">AOS TV</a></li>
-                <li><a href="contacto.html" class="activo">Contáctanos</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <!-- CONTENIDO -->
     <section class="contenido">
         <h1>Contáctanos</h1>
@@ -55,10 +34,25 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Alchemists of Sounds</p>
-    </footer>
-
 </body>
 </html>
+
+
+<script>
+  // Esto carga el HEADER desde el archivo footer.html
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('afterbegin', data);
+    });
+</script>
+
+
+<script>
+  // Esto carga el FOOTER desde el archivo footer.html
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('beforeend', data);
+    });
+</script>

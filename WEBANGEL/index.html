@@ -9,22 +9,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logoangel.png" alt="Alchemists of Sounds">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes.html">Quiénes somos</a></li>
-                <li><a href="multimedia.html">Multimedia</a></li>
-                <li><a href="reserva.html">Reserva</a></li>
-                <li><a href="tv.html">AOS TV</a></li>
-                <li><a href="contacto.html">Contáctanos</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <section class="hero">
         <img src="logoangel.png" alt="Alchemists of Sounds" width="270">
         <h1>Alchemists of Sounds</h1>
@@ -32,8 +16,24 @@
         <a href="reserva.html" class="btn-reserva">Reserva tu fecha</a>
     </section>
 
-    <footer>
-        <p>© 2025 Alchemists of Sounds</p>
-    </footer>
 </body>
 </html>
+
+<script>
+  // Esto carga el navbar desde el archivo footer.html
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('afterbegin', data);
+    });
+</script>
+
+
+<script>
+  // Esto carga el footer desde el archivo footer.html
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('beforeend', data);
+    });
+</script>
