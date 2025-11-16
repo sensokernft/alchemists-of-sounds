@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #111;
+}
+
+header img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('fondo.jpg') center/cover no-repeat;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+section {
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery img, .gallery video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+}
+
+.social a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+.center-text {
+    text-align: center;
+  }
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;   /* distancia desde el borde inferior */
+    right: 20px;    /* distancia desde el borde derecho */
+    width: 60px;    /* tamaño del botón */
+    height: 60px;
+    z-index: 1000;  /* que quede por encima de todo */
+    border-radius: 50%;  /* círculo */
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+  }
+  
+  .whatsapp-button img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1);  /* efecto al pasar el cursor */
+  }
+  #toggleMusica {
+    position: fixed;
+    bottom: 90px;   /* arriba del WhatsApp */
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+  }
+  
+  #toggleMusica:hover {
+    transform: scale(1.1);
+  }
+  .instagram-button {
+    position: fixed;
+    bottom: 160px;  /* encima del WhatsApp y música */
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+  }
+  
+  .instagram-button img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .instagram-button:hover {
+    transform: scale(1.1);
+  }
+  #floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+  }
+  
+  #floating-buttons a, #floating-buttons button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    border: none;
+  }
+  
+  #floating-buttons a img {
+    width: 70%;
+    height: 70%;
+  }
+  
+  #floating-buttons a:hover, #floating-buttons button:hover {
+    transform: scale(1.1);
+  }
+  
+  #toggleMusica {
+    font-size: 24px;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  #reserva input, #reserva button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  #reserva button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #reserva button:hover {
+    background-color: #444444;
+  }
+  #reserva {
+    display: flex;               /* activa Flexbox */
+    flex-direction: column;      /* apila título, párrafo y formulario */
+    justify-content: center;     /* centra verticalmente */
+    align-items: center;         /* centra horizontalmente */
+    min-height: 80vh;            /* altura mínima para centrar verticalmente */
+    max-width: 500px;            /* opcional, limita ancho de la sección */
+    margin: 0 auto;              /* centrado horizontal si hay espacio extra */
+    padding: 2rem;
+    background-color: #111;      /* fondo negro */
+    color: #fff;                 /* texto blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-align: center;          /* centra títulos y párrafos */
+  }
+  
+  #reserva form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;                 /* ocupa todo el ancho permitido */
+    max-width: 300px;            /* limita ancho de inputs */
+  }
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #000;  /* negro profesional */
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Botón de reserva */
+  .btn-reserva {
+    background-color: #fff;
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  .btn-reserva:hover {
+    background-color: #444;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .foto-dj {
+    width: 250px !important;   /* fuerza el tamaño */
+    height: auto !important;   /* mantiene proporción */
+    border-radius: 15px;       /* opcional: bordes redondeados */
+    display: block;            /* asegura que pueda centrarse */
+    margin: 20px auto;         /* lo centra en la página */
+  }
+  
