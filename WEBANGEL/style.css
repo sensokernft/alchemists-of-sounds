@@ -8,34 +8,54 @@ body {
     background-color: #000;
     color: white;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('fondodemierda.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background: #111;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  background: #111;
 }
 
 header img {
-    height: 50px;
+  height: 50px;
+  margin-right: auto;   
+}
+
+nav {
+  padding-left: 20px; /* o el valor que necesites */
+  padding-right: 20px;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 800px; /* ajusta según tu diseño */
 }
 
+
 nav li {
-    margin: 0 15px;
+  margin: 0;          
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
+
 
 .hero {
     height: 90vh;
@@ -46,6 +66,10 @@ nav a {
     background: url('fondo.jpg') center/cover no-repeat;
     text-align: center;
 }
+
+.caja-a-bajar {
+    margin-top: 35%; /* Desplazamiento del 10% del ancho del contenedor */  
+  }
 
 .hero h1 {
     font-size: 3rem;
